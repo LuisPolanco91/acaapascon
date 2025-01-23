@@ -43,17 +43,19 @@
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #e7f2fe; 
+    background-color: #6BAFFB; 
     color: black; 
     cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
+    padding: 15px 15px;
     font-size: 13px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    clip-path: polygon(50% 0%, 100% 70%, 75% 100%, 25% 100%, 0% 70%);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #back-to-top-btn:hover {
     background-color: #6BAFFB; 
+    transform: scale(1.1);
 }
 
 /* Fondo de encabezado de Páginas */
