@@ -6,11 +6,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Asociación Comunal Administradora de Acueducto Rural El Pascon, San Jacinto, Coatepeque, Santa Ana Este, El Salvador.">
     <title>ACAAPASCON - Inicio</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap/css/style.css">
     <link rel="shortcut icon" href="images/drop.ico">
     <script src="https://kit.fontawesome.com/1af055768e.js" crossorigin="anonymous"></script>
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "xJcRWsxW7fbDf0PlV",
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -159,10 +172,74 @@
         </div>
     </section>
 
+    <!-- Horarios -->
+    <Section class="py-5 text-center" style="background-color: #f1f1f1;">
+
+        <div class="pt-5 pb-5 container">
+            <div class="row">
+
+                <h1 class="fw-bold pt-4 pb-4 text-bg-dark text-center">Horarios de Distribución por Sector</h1>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 pt-4">
+
+                    <h1 class="fw-bold pb-4">Día 1</h1>
+
+
+                    <div class="border-start border-end border-top border-bottom border-primary-subtle border-5 pt-2">
+                        <h3 class="fw-bold">Sector 1: Los Juarez</h3>
+                        <h5 class="text-muted">6:00 AM - 12:00 PM</h5>
+                    </div>
+                    <div
+                        class="border-start border-end border-top border-bottom border-primary-subtle border-5 mt-5 pt-2">
+                        <h3 class="fw-bold">Sector 2: La Cruz Verde</h3>
+                        <h5 class="text-muted">1:00 PM - 6:00 PM</h5>
+                    </div>
+                    <div
+                        class="border-start border-end border-top border-bottom border-primary-subtle border-5 mt-5 pt-2">
+                        <h3 class="fw-bold">Sector 3: La Clinica</h3>
+                        <h5 class="text-muted">1:00 PM - 6:00 PM</h5>
+                    </div>
+                    <div
+                        class="border-start border-end border-top border-bottom border-primary-subtle border-5 mt-5 pt-2">
+                        <h3 class="fw-bold">Sector 4: Centro del Valle</h3>
+                        <h5 class="text-muted">1:00 PM - 6:00 PM</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 pt-4">
+
+                    <h1 class="fw-bold pb-4">Día 2</h1>
+
+
+                    <div class="border-start border-end border-top border-bottom border-primary-subtle border-5 pt-2">
+                        <h3 class="fw-bold">Sector 1: Fam. Monrroy</h3>
+                        <h5 class="text-muted">6:00 AM - 12:00 PM</h5>
+                    </div>
+                    <div
+                        class="border-start border-end border-top border-bottom border-primary-subtle border-5 mt-5 pt-2">
+                        <h3 class="fw-bold">Sector 2: Los Chacones</h3>
+                        <h5 class="text-muted">1:00 PM - 6:00 PM</h5>
+                    </div>
+                    <div
+                        class="border-start border-end border-top border-bottom border-primary-subtle border-5 mt-5 pt-2">
+                        <h3 class="fw-bold">Sector 3: Pje. Las Flores</h3>
+                        <h5 class="text-muted">1:00 PM - 6:00 PM</h5>
+                    </div>
+                    <div
+                        class="border-start border-end border-top border-bottom border-primary-subtle border-5 mt-5 pt-2">
+                        <h3 class="fw-bold">Sector 4: Fam. Lopez</h3>
+                        <h5 class="text-muted">1:00 PM - 6:00 PM</h5>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </Section>
+
 
     <!-- Sección Blog -->
-    <section id="blog" class="py-5" style="background-color: #f1f1f1;">
-        <div class="container text-center">
+    <section id="blog" class="py-5" style="background-color: ffffff;">
+        <div class="pt-5 pb-5 container text-center">
             <h1 class="text-center mb-5">Últimos Trabajos y Noticias</h1>
             <div class="row">
                 <div class="col-lg-4 mb-4">
@@ -172,7 +249,7 @@
                             <h5 class="card-title">Lorem ipsum</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit,
                                 sit amet consectetur adipisicing elit.</p>
-                            <a href="trabajos.html" class="btn btn-secondary">Ver Más</a>
+                            <a href="trabajos.html" class="btn btn-outline-secondary">Ver Más</a>
                         </div>
                     </div>
                 </div>
@@ -183,7 +260,7 @@
                             <h5 class="card-title">Lorem ipsum</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit,
                                 sit amet consectetur adipisicing elit.</p>
-                            <a href="trabajos.html" class="btn btn-secondary">Ver Más</a>
+                            <a href="trabajos.html" class="btn btn-outline-secondary">Ver Más</a>
                         </div>
                     </div>
                 </div>
@@ -194,7 +271,7 @@
                             <h5 class="card-title">Lorem ipsum</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit,
                                 sit amet consectetur adipisicing elit.</p>
-                            <a href="trabajos.html" class="btn btn-secondary">Ver Más</a>
+                            <a href="trabajos.html" class="btn btn-outline-secondary">Ver Más</a>
                         </div>
                     </div>
                 </div>
@@ -203,10 +280,68 @@
     </section>
 
     <!-- Sección Contacto -->
-    <section id="contact" class="py-5" style="background-color: #f5f5f5;">
-        <div class="container">
+    <section id="contact" class="py-5" style="background-color: #f1f1f1;">
+        <div class="container pt-5 pb-5">
             <div class="row">
                 <div class="col-lg-6">
+
+                    <h3>Déjanos tu mensaje, nunca compartiremos tu información con nadie.</h3>
+                    <br>
+                    <div>
+                        <h6 class="fw-bold">(*) Campo Requerido</h6>
+                        <br>
+                    </div>
+
+                    <!-- Formulario de Contacto -->
+                    <form id="contactForm">
+                        <!--Nombre-->
+                        <div class="form-floating mb-3">
+                            <input id="name" type="text" class="form-control" placeholder="Juan Perez" required>
+                            <label for="nombre" class="form-label">Nombre *</label>
+                        </div>
+
+                        <!--Correo-->
+                        <div class="form-floating mb-3">
+                            <input id="email_id" type="email" class="form-control" placeholder="nombre@ejemplo.com"
+                                required>
+                            <label for="correo" class="form-label">Correo *</label>
+                        </div>
+
+                        <!-- Número de Contacto -->
+                        <div class="form-floating mb-3">
+                            <input id="contact_id" type="tel" class="form-control" placeholder="Número de contacto"
+                                required>
+                            <label for="contacto" class="form-label">Número de Contacto *</label>
+                        </div>
+
+                        <!-- Mensaje -->
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensaje *</label>
+                            <textarea id="message" class="form-control" rows="3" required></textarea>
+                        </div>
+
+                        <!-- Checkbox de verificación -->
+                        <div class="mb-3 form-check">
+                            <input id="comprobar_id" type="checkbox" class="form-check-input" required>
+                            <label class="form-check-label" for="comprobar">Comprobar que eres humano</label>
+                        </div>
+
+                        <button type="submit" onclick="SendMail()" class="btn btn-outline-primary">Enviar</button>
+
+                        <div id="confirmationMessage" style="display: none;" class="mt-3">¡Menjase enviado con éxito,<br> 
+                            nos pondremos en contacto con tigo a la brevedad posible! <br>
+                            <br>
+                            <strong>Gracias por contactarnos.</strong><br>
+                            <strong>Atentamente, ACAAPASCON.</strong><br>
+                            <strong>Asociación Comunal Administradora de Acueducto Rural El Pascon.</strong>
+                        </div>
+                    </form>
+
+
+                </div>
+
+                <div class="col-lg-6">
+
                     <h3>Información de Contacto</h3>
                     <p><strong>Dirección:</strong> San Jacinto, distrito de Coatepeque, Santa Ana Este.</p>
                     <p><strong>Teléfono:</strong> <a href="tel:+123 456 7890">+123 456 7890</a></p>
@@ -227,41 +362,8 @@
                             <h1><i class="fa-brands fa-square-whatsapp"></i></h1>
                         </a>
                     </div>
-                </div>
 
-                <div class="col-lg-6">
-                    <h3>Déjanos tu Mensaje</h3>
-                    <br>
-                    <div>
-                        <h6 class="fw-bold">(*) Campo Requerido</h6>
-                        <br>
-                    </div>
-                    <br>
-                    <form>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="Juan Perez" required>
-                            <label for="floatingInput" class="form-label">Nombre *</label>
-                            
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com" required>
-                            <label for="floatingInput" class="form-label">Correo *</label>
-                        </div>
-                        <div class="form-floating mb-3">
 
-                            <input type="number" class="form-control" id="floatingInput" placeholder="#273" required>
-                            <label for="floatingInput" class="form-label">Número de Servicio de Agua *</label>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Mensaje *</label>
-                            <textarea class="form-control" id="message" rows="3" required></textarea>
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-                            <label class="form-check-label" for="exampleCheck1">Comprobar que eres humano</label>
-                          </div>
-                        <button type="submit" class="btn btn-light">Enviar</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -278,7 +380,9 @@
 
             </div>
             <p>&copy; 2025 ACAAPASCON - Todos los derechos reservados.</p>
-            <span>Desarrollado por <a href="https://luispolanco.me/" target="_blank" class="text-white fw-bold">Luis Polanco</a></span>
+            <span>Desarrollado por <a href="https://luispolanco.me/" target="_blank" class="text-white fw-bold">Luis
+                    Polanco</a>
+            </span>
         </div>
     </footer>
 
