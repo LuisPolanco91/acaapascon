@@ -46,7 +46,7 @@ function SendMail() {
 
         // Ocultar solo los elementos del formulario (inputs, textarea, botón, checkbox)
         var formElements = document.querySelectorAll(
-            "#contactForm input, #contactForm textarea, #contactForm button, #contactForm .form-check"
+            "#contactForm input, #contactForm textarea, #contactForm button, #contactForm, #contactForm label, .form-check"
         );
         formElements.forEach(function (element) {
             element.style.display = "none";

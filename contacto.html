@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="bootstrap/css/style.css">
     <link rel="shortcut icon" href="images/drop.ico">
     <script src="https://kit.fontawesome.com/1af055768e.js" crossorigin="anonymous"></script>
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "xJcRWsxW7fbDf0PlV",
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -105,75 +116,51 @@
                         <h6 class="fw-bold">(*) Campo Requerido</h6>
                         <br>
                     </div>
-                    <form>
+                    <!-- Formulario de Contacto -->
+                    <form id="contactForm">
                         <!--Nombre-->
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="nombre" placeholder="Juan Perez" required>
+                            <input id="name" type="text" class="form-control" placeholder="Juan Perez" required>
                             <label for="nombre" class="form-label">Nombre *</label>
                         </div>
 
                         <!--Correo-->
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com"
+                            <input id="email_id" type="email" class="form-control" placeholder="nombre@ejemplo.com"
                                 required>
                             <label for="correo" class="form-label">Correo *</label>
                         </div>
 
-                        <!--Selección de Servicio-->
-                        <div class="mb-3">
-                            <label for="tipoServicio" class="form-label">Seleccione una opción *</label>
-                            <select class="form-select" id="tipoServicio" required onchange="mostrarCampos()">
-                                <option value="" selected disabled>Seleccione una opción</option>
-                                <option value="contratar">Contratar servicio</option>
-                                <option value="reportar">Reportar servicio</option>
-                            </select>
-                        </div>
-
-                        <!-- Campo para Contratar Servicio (Número de Contacto) -->
-                        <div class="form-floating mb-3 d-none" id="campoContacto">
-                            <input type="tel" class="form-control" id="contacto" placeholder="Número de contacto">
+                        <!-- Número de Contacto -->
+                        <div class="form-floating mb-3">
+                            <input id="contact_id" type="tel" class="form-control" placeholder="Número de contacto"
+                                required>
                             <label for="contacto" class="form-label">Número de Contacto *</label>
                         </div>
 
-                        <!-- Campo para Contratar Servicio (Dirección) -->
-                        <div class="form-floating mb-3 d-none" id="campoDireccion">
-                            <input type="text" class="form-control" id="direccion" placeholder="Col. Los Juarez">
-                            <label for="direccion" class="form-label">Dirección *</label>
-                        </div>
-
-                        <!-- Campo Reportar Servicio (Número de acometida o paja de agua) -->
-                        <div class="form-floating mb-3 d-none" id="campoAcometida">
-                            <input type="number" class="form-control" id="numeroAcometida"
-                                placeholder="Número de acometida">
-                            <label for="numeroAcometida" class="form-label">Número de Acometida / Paja de Agua *</label>
-                        </div>
-
-                        <!-- Campo para Reportar Servicio (Titular) -->
-                        <div class="form-floating mb-3 d-none" id="campoTitular">
-                            <input type="text" class="form-control" id="titular" placeholder="Col. Los Juarez">
-                            <label for="titular" class="form-label">Titular del Servicio *</label>
-                        </div>
-
-                        <!-- Campo para Adjuntar Archivo -->
-                        <div class="mb-3 d-none" id="campoArchivo">
-                            <label for="formFile" class="form-label" id="archivo">Agregar foto (Opcional)</label>
-                            <input class="form-control" type="file" id="formFile">
-                        </div>
-
                         <!-- Mensaje -->
-                        <div class="mb-3 d-none" id="campoMensaje">
+                        <div class="mb-3">
                             <label for="message" class="form-label">Mensaje *</label>
-                            <textarea class="form-control" id="message" rows="3" required></textarea>
+                            <textarea id="message" class="form-control" rows="3" required></textarea>
                         </div>
 
                         <!-- Checkbox de verificación -->
                         <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="comprobar" required>
+                            <input id="comprobar_id" type="checkbox" class="form-check-input" required>
                             <label class="form-check-label" for="comprobar">Comprobar que eres humano</label>
                         </div>
 
                         <button type="submit" class="btn btn-outline-primary">Enviar</button>
+
                     </form>
+
+                    <div id="confirmationMessage" style="display: none;" class="mt-3">
+                        ¡Mensaje enviado con éxito,<br>
+                        nos pondremos en contacto contigo a la brevedad posible! <br><br>
+                        <strong>Gracias por contactarnos.</strong><br>
+                        <strong>Atentamente, ACAAPASCON.</strong><br>
+                        <strong>Asociación Comunal Administradora de Acueducto Rural El Pascon.</strong>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12"></div>
             </div>
