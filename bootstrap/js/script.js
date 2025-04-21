@@ -1,5 +1,5 @@
 // Cuando el usuario hace scroll hacia abajo 20px desde la parte superior de la página, muestra el botón
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
     const backToTopBtn = document.getElementById("back-to-top-btn");
@@ -11,11 +11,25 @@ function scrollFunction() {
 }
 
 // Cuando el usuario hace clic en el botón, vuelve al principio de la página
-document.getElementById("back-to-top-btn").addEventListener("click", function() {
+document.getElementById("back-to-top-btn").addEventListener("click", function () {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita el envío del formulario por defecto
+
+        if (form.checkValidity()) {
+            SendMail(); // Llama a la función SendMail si el formulario es válido
+        } else {
+            alert("Por favor, completa todos los campos requeridos.");
+        }
+    });
+});
 
 // Inicializar EmailJS para inplementar el formulario de contacto con nuestro servicio de correo
 function SendMail() {
@@ -24,23 +38,31 @@ function SendMail() {
         email_id: document.getElementById("email_id").value,
         contact_id: document.getElementById("contact_id").value,
         message: document.getElementById("message").value
-    }
+    };
+
     emailjs.send("service_qptyve8", "template_67um9bk", params).then(function (res) {
         console.log("success", res.status);
         alert("Mensaje enviado exitosamente!");
-        document.getElementById("contactForm").reset();
-        // Mostrar mensaje de confirmación
-        document.getElementById("confirmationMessage").style.display = "block";
-    }
 
-    ).catch(function (error) {
+        // Ocultar solo los elementos del formulario (inputs, textarea, botón, checkbox)
+        var formElements = document.querySelectorAll(
+            "#contactForm input, #contactForm textarea, #contactForm button, #contactForm .form-check"
+        );
+        formElements.forEach(function (element) {
+            element.style.display = "none";
+        });
+
+        // Mostrar el mensaje de confirmación
+        document.getElementById("confirmationMessage").style.display = "block";
+
+        // Limpiar el formulario
+        document.getElementById("contactForm").reset();
+    }).catch(function (error) {
         console.log("Error al enviar el mensaje", error);
         alert("Error al enviar el mensaje. Por favor, inténtalo de nuevo.");
     });
-    // Limpiar el formulario después de enviar
-    document.getElementById("contactForm").reset();
-    
 }
+
 
 
 
