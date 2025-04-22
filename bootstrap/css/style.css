@@ -86,6 +86,19 @@
     z-index: 2;
 }
 
+/* Cajas sección nosotros */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #6BAFFB;
+    color: #000;
+}
+
+
 /* Servicios - Comportamiento de los Iconos */
 .circulo-servicios {
     width: 80px;
@@ -110,5 +123,19 @@
 
 .circulo-servicios:hover i {
     color: #333;
+}
+
+/* Sección de Servicios Requerimientos u Obligaciones */
+
+/* Cajas sección nosotros */
+.card-hover-services {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-services:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #e7f2fe;
+    color: #000;
 }
 
